@@ -1,4 +1,8 @@
 # Configuração de Ambiente de Desenvolvimento
+
+![GitHub repo size](https://img.shields.io/github/repo-size/amanda-lima/env-config)
+![ViewCount](https://views.whatilearened.today/views/github/amanda-lima/env-config.svg)
+
 ##### Por: [@amanda-lima](https://github.com/amanda-lima)
 
 Neste documento será demonstrado o passo a passo da configuração do ambiente de desenvolvimento para uma máquina Linux Ubuntu.
@@ -360,3 +364,30 @@ Finalmente, instale o Docker:
   ![imagem](https://i.imgur.com/J68N2YZ.jpg)
 
   ![imagem](https://i.imgur.com/TKZcz85.jpg)
+
+
+### Criando atalho: 
+
+- Copiando o icone do XAMPP para a pasta do lampp:
+    ```shell
+    sudo cp -i /opt/lampp/htdocs/favicon.ico /opt/lampp/icons/
+    ```
+- Crie um lançador para o programa executando o comando abaixo:
+
+    ```shell
+    echo -e '[Desktop Entry]\n Version=1.0\n Name=xampp\n Exec=lxqt-sudo /opt/lampp/manager-linux-x64.run\n Icon=/opt/lampp/icons/favicon.ico\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/xampp.desktop
+    ```
+
+- Para que o atalho funcione corretamente, instale o LXQT com o comando abaixo. 
+    ```shell
+    sudo apt-get install lxqt-sudo
+    ```
+
+- Coloque o atalho na sua área de trabalho usando o comando abaixo:
+    ```shell
+    sudo chmod +x /usr/share/applications/xampp.desktop
+    ```
+
+    ```shell
+    cp /usr/share/applications/xampp.desktop ~/Desktop
+    ```
