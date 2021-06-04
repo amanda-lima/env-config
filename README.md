@@ -86,7 +86,7 @@ Iremos instalar o VScode pela própria loja de aplicativos do Ubuntu e instalar 
 
 - Verificando chaves SSH:
   ```shell
-    ls -agit@github.com:user-name/repository-name.gitl ~/.ssh
+    ls -al ~/.ssh
   ```
 - Gerando nova chave SSH:
     - Abra o Git Bash/Terminal;
